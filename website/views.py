@@ -1,10 +1,16 @@
-from flask import Blueprint,render_template,redirect,url_for
+from flask import Blueprint,render_template,request,flash, jsonify
+from flask_login import login_required, current_user
+from . import db
+import json
 
-# set Name Blueprint => views
+# create Blueprint name => views
 views = Blueprint('views', __name__)
 
-# this file for website page
-
-@views.route('/')
+# this is home page website
+@views.route('/', methods=['GET', 'POST'])
+# if not login can't enter
+@login_required
 def home():
-    return render_template('index.html')
+    return render_template("home.html", user=current_user)
+
+
