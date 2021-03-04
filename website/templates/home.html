@@ -1,5 +1,12 @@
 {% extends "base.html" %}
 <title>{% block title %}Change{% endblock %}</title>
 {% block content %}
-  <h1>TEST</h1>
+<div class="show-daily">
+  <div class="box">
+    <div class="content">
+      <img src="{{ APOD.hdurl }}">
+      <h2>{{ APOD.title }}</h2>
+    </div>
+  </div>
+</div>
 {% endblock %}
