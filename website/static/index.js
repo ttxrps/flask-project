@@ -1,8 +1,6 @@
-function deleteNote(noteId) {
-    fetch('/delete-note', {
-        method: 'POST',
-        body: JSON.stringify({ noteId: noteId}),
-    }).then((_res) => {
-        window.location.href = "/";
-    })
+function toggleMenu(){
+    const navigation = document.querySelector('.navigation');
+    const toggle = document.querySelector('.toggle');
+    navigation.classList.toggle('active');
+    toggle.classList.toggle('active');
 }
