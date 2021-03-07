@@ -5,15 +5,10 @@ from urllib.request import urlopen
 from . import db
 from .function import fetchAPOD
 
-URL_APOD = "https://api.nasa.gov/planetary/apod{0}"
-api_key = 'PIQgwKgT5WieoxPWMksJNr1GtdtIktdVc01dc6Jr'
-
 # create Blueprint name => views
 views = Blueprint('views', __name__)
 
 # this is home page website
-
-
 @views.route('/', methods=['GET', 'POST'])
 # if not login can't enter
 @login_required
