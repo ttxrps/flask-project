@@ -1,6 +1,13 @@
 {% if user.is_authenticated %}
 <div class="navigation">
     <ul>
+        <li>         
+            <div class="action">
+                <div class="user">
+                    <img src="/static/{{ user.profile }}" >
+                </div>
+            </div> 
+        </li>
         <li>
             <a href="/">
                 <span class="icon"><i class="fa fa-home" aria-hidden="true"></i>
@@ -46,12 +53,5 @@
     </ul>
 </div>
 <div class="toggle" onclick="toggleMenu()"></div>
-<div class="action">
-    <div class="user" onclick="menuToggle()">
-        <img src="/static/{{ user.profile }}" >
-    </div>
-    <div class="menu">
-        <h3>{{ user.first_name }} <br><span>Website Developer</span></h3>
-    </div>
-</div>
+
 {% endif %}
