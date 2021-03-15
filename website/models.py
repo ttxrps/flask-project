@@ -1,7 +1,6 @@
 from . import db
 from flask_login import UserMixin
-from sqlalchemy.sql import func
-from sqlalchemy.dialects.sqlite import BLOB
+
 
 # create models for database
 class User(db.Model, UserMixin):
@@ -9,4 +8,6 @@ class User(db.Model, UserMixin):
     email = db.Column(db.String(150), unique=True)
     password = db.Column(db.String(150))
     first_name = db.Column(db.String(150))
+    last_name = db.Column(db.String(150))
+    id_st = db.Column(db.String(150))
     profile = db.Column(db.String(150))
