@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+<title>{% block title %}Team{% endblock %}</title>
+{% block content %}
+<h1 class="cont">TEAM</h1>
+<div class="profile">
+    <div class="box-team">
+        {% for team in teams %}
+        <div class="team">
+            <div class="imgBx">
+                <img src="/static/team/{{ team.profile }}" alt="">
+            </div>
+            <div class="content">
+                <h2>{{ team.first_name }} {{ team.last_name }}<br><span>{{ team.id_st }}</span></h2>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

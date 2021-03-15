@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+<title>{% block title %}Neo{% endblock %}</title>
+{% block content %}
+<div class="asteroids">
+    <div class="a_pic">
+        <h1>Asteroids</h1>
+    </div>
+    <div class="a_text">
+        <p>Asteroids, sometimes called minor planets, are rocky, airless remnants 
+        left over from the early formation of our solar system about 4.6 billion years ago.
+        The current known asteroid count is: 1,068,666. Most of this ancient space rubble 
+        can be found orbiting the Sun between Mars and Jupiter within the main asteroid belt
+        Asteroids range in size from Vesta — the largest at about 329 miles (530 kilometers) in diameter — to bodies 
+        that are less than 33 feet (10 meters) across. The total mass of all the asteroids combined is less than that of Earth's Moon.
+        </p>
+    </div>
+</div>
+
+<div class="Sci">
+    <h1><b> Key Science Targets</b></h1>
+    <div class="grid-container_2">
+        <div class="grid-item_2">
+        <img src="/static/neo/1.jpg" alt="">
+        <p>101955 Bennu</p>
+        </div>
+        <div class="grid-item_2">
+        <img src="/static/neo/2.jpg" alt="">
+        <p>10199 Chariklo</p>
+        </div>
+        <div class="grid-item_2">
+        <img src="/static/neo/3.jpg" alt="">
+        <p>16 Psyche</p>
+        </div>  
+        <div class="grid-item_2">
+        <img src="/static/neo/4.jpg" alt="">
+        <p>2019 OK</p>
+        </div>
+        <div class="grid-item_2">
+        <img src="/static/neo/5.jpg" alt="">
+        <p>243 Ida</p>
+        </div>
+        <div class="grid-item_2">
+        <img src="/static/neo/6.jpg" alt="">
+        <p>25143 Itokawa</p>
+        </div>  
+        <div class="grid-item_2">
+        <img src="/static/neo/7.jpg" alt="">
+        <p>253 Mathilde</p>
+        </div>
+        <div class="grid-item_2">
+        <img src="/static/neo/8.jpg" alt="">
+        <p>433 Eros</p>
+        </div>
+        <div class="grid-item_2">
+        <img src="/static/neo/9.jpg" alt="">
+        <p>4 Vesta</p>
+        </div>
+        <div class="grid-item_2">
+        <img src="/static/neo/10.jpg" alt="">
+        <p>Apophis</p>
+        </div>  
+    </div>
+
+    </div>
+    <h1 class="neo-head">NEW RELEASE</h1>
+    <div class="neo-box">
+        <div class="neo-container">
+            {% for name,id,link in myFeed %}
+            <a href="{{link}}">name: {{ name }}<br>id :{{id}}</a>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

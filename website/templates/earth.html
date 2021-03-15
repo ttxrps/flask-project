@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+<title>{% block title %}Earth{% endblock %}</title>
+{% block content %}
+<div class="epic">
+    <div class="epic-head">
+        <h3>EARTH IMAGES FROM <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;MULTIPLE SATELLITES</h3>
+    </div> 
+
+    <div class="epic-img" style="max-width:500px"> 
+        {% for img in list %}  
+            <img class="mySlides" src="{{ img }}" style="width:100%;align-items: center;">
+        {% endfor %} 
+    </div>
+
+    <div class="epic-form">      
+        <form class="epic-in-form">
+            <input type="text" name="date" class="search" placeholder="YYYY-MM-DD" /><input type="submit" value="search" class="submit" />
+        </form>
+    </div>
+
+    <div class="epic-des">       
+        <p>&emsp;&emsp;&emsp;Earth is our home planet. Scientists believe Earth and its moon formed around the same time as the rest of the solar system. 
+                They think that was about 4.5 billion years ago. Earth is the fifth-largest planet in the solar system. Its diameter is about 8,000 miles.
+                And Earth is the third-closest planet to the sun. Its average distance from the sun is about 93 million miles. Only Mercury and Venus are closer.</p>
+        <p>&emsp;&emsp;&emsp;Earth has been called the "Goldilocks planet." In the story of "Goldilocks and the Three Bears," a little girl named Goldilocks liked everything just right. 
+                Her porridge couldn't be too hot or too cold. And her bed couldn't be too hard or too soft. On Earth, everything is just right for life to exist. It's warm, but not too warm.
+                And it has water, but not too much water.</p>
+        <p>&emsp;&emsp;&emsp;Earth is the only planet known to have large amounts of liquid water. Liquid water is essential for life. Earth is the only planet where life is known to exist.</p>
+    </div> 
+
+</div>
+
+<!-- Moon -->
+<div class="moon">
+    <div class="moon-1"><!--bg-pic--></div>
+    <div class="moon-2">
+        <h5>What is a Moon?<br></h5>
+        <p>&emsp;&emsp;&emsp;Moons – also known as natural satellites – orbit planets and asteroids in our solar system. Earth has one moon, and
+            there are more than 200 moons in our solar system. Most of the major planets – all except Mercury and Venus – have
+            moons. Pluto and some other dwarf planets, as well as many asteroids, also have small moons. Saturn and Jupiter
+            have the most moons, with dozens orbiting each of the two giant planets.</p>
+        <p>&emsp;&emsp;&emsp;Moons come in many shapes, sizes, and types. A few have atmospheres and even hidden oceans beneath their
+            surfaces. Most planetary moons probably formed from the discs of gas and dust circulating around planets in the early
+            solar system, though some are "captured" objects that formed elsewhere and fell into orbit around larger world</p><br>
+    </div>
+</div>
+
+<div class="cat-moon">
+        <h3>Moons in Our Solar System</h3>    
+    <div class="grid-container">
+        <div class="item">
+            <div class="pic-moon"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg" alt=""></div><br>
+            <b>Earth's Moon</b><br>
+            our only natural satellites is a stabilizing force 
+            that makes the planet a more pleasant place for life
+        </div>
+        <div class="item"><div class="pic-moon"><img src="https://solarsystem.nasa.gov/system/content_pages/main_images/428_phobosincolor_pia10369.jpg"></div><br>
+            <b>Mars Moons</b><br>
+            Two tiny mooons orbit the Red Planet. One, Phobos, 
+            is slowly being torn apart by Mars.    
+        </div>
+        <div class="item"><div class="pic-moon"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Jupiter_and_its_shrunken_Great_Red_Spot.jpg"></div><br>
+            <b>Jupiter Moons</b><br>
+            Moons swam around this giant world,
+            including icy Europa with its hidden ocean.  
+        </div>
+        <div class="item"><div class="pic-moon"><img src="http://www.nasa.gov/sites/default/files/thumbnails/image/pia14922-nasa.jpg"></div><br>
+            <b>Saturn Moons</b><br>
+            Some moons of Saturn shape its beautiful rings.
+            One is equal in size to a planet.
+        </div>
+        <div class="item"><div class="pic-moon"><img src="https://solarsystem.nasa.gov/system/stellar_items/list_view_images/81_uranus_moon_ariel_480x320.jpg"></div><br>
+            <b>Uranus Moons</b><br>
+            Moons of this distant ice giant are
+            named for great literature.
+        </div>
+        <div class="item"><div class="pic-moon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Charon_in_True_Color_-_High-Res.jpg/230px-Charon_in_True_Color_-_High-Res.jpg"></div><br>
+            <b>Pluto Moons</b><br>
+            The moon Charon is so big it makes 
+            Pluto wobble.
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+

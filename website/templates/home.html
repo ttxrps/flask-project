@@ -1,0 +1,219 @@
+{% extends "base.html" %}
+<title>{% block title %}Nasa{% endblock %}</title>
+{% block content %}
+<div class="show-daily">
+    <div class="solar">
+        <h5 class="head">Our Solar System</h5>
+        <div class="know-solar">
+        <h2>Why is it Called The "Solar" System?</h2>
+        <p>
+        There are many planetary systems like ours in the universe, with
+        planets orbiting a host star. Our planetary system is named the
+        "solar" system because our Sun is named Sol, after the Latin word for
+        Sun, "solis," and anything related to the Sun we call "solar."
+        </p>
+        </div>
+        <br />
+        <p class="content-solar">
+        Our planetary system is located in an outer spiral arm of the Milky
+        Way galaxy.<br>Our solar system consists of our star, the Sun, and
+        everything bound to it by gravity — the planets Mercury, Venus,Earth,
+        Mars, Jupiter, Saturn, Uranus and Neptune, dwarf planets such as
+        Pluto, dozens of moons and millions ofasteroids, comets and
+        meteoroids. Beyond our own solar system, we have discovered thousands
+        of planetary systems orbiting other stars in the Milky Way
+        </p>
+        <div class="link-solar">
+            <p>Go farther.</p>
+            <a href="https://solarsystem.nasa.gov/solar-system/our-solar-system/in-depth/">Explore Our Solar System in Depth ›</a>
+        </div>
+    </div>
+    <div class="pic">
+        <h1>Best Picture of the day.</h1>
+        <img
+        src="{{ APOD.hdurl }}"
+        alt=""
+        />
+        <h4>{{ APOD.title }}</h4>
+    </div>
+</div>
+<div class="need-know">
+    <h2>10 Need-to-Know Things About the Solar System</h2>
+    <div class="grid-container1">
+        <div class="grid-item grid1">
+            <h3 class="num">1</h3>
+            <h4 class="why">ONE OF BILLIONS</h4>
+            <p>Our solar system is made up of a star, eight planets and countless 
+                smaller bodies such as dwarf planets, asteroids and comets.
+            </p>
+        </div>
+        <div class="grid-item grid1">
+            <h3 class="num">2</h3>
+            <h4 class="why">MEET ME IN THE ORION ARM</h4>
+            <p>Our solar system orbits the center of the Milky Way Galaxy at about 515,000 mph (828,000 kph). 
+                We’re in one of the galaxy’s four spiral arms.
+            </p>
+        </div>
+        <div class="grid-item grid2">
+            <h3 class="num">3</h3>
+            <h4 class="why">A LONG WAY ROUND</h4>
+            <p>It takes our solar system about 230 million years to complete one 
+                orbit around the galactic center.
+            </p>
+        </div>  
+        <div class="grid-item grid1 grid-img1">
+            
+        </div>
+        <div class="grid-item grid1">
+            <h3 class="num">4</h3>
+            <h4 class="why">SPIRALING THROUGH SPACE</h4>
+            <p>There are three general kinds of galaxies: elliptical, 
+                spiral and irregular. The Milky Way is a spiral galaxy.
+            </p>
+        </div>
+        <div class="grid-item grid2">
+            <h3 class="num">5</h3>
+            <h4 class="why">GOOD ATMOSPHERE(S)</h4>
+            <p>Our solar system is a region of space. It has no atmosphere. 
+                But it contains many worlds—including Earth—with many kinds of atmospheres.
+            </p>
+        </div>  
+        <div class="grid-item grid1">
+            <h3 class="num">6</h3>
+            <h4 class="why">MANY MOONS</h4>
+            <p>The planets of our solar system—and even some asteroids—hold 
+                more than 150 moons in their orbits.
+            </p>
+        </div>
+        <div class="grid-item grid1">
+            <h3 class="num">7</h3>
+            <h4 class="why">RING WORLDS</h4>
+            <p>The four giant planets—and at least one asteroid—have rings. 
+                None are as spectacular as Saturn’s gorgeous rings.
+            </p>
+        </div>
+        <div class="grid-item grid2">
+            <h3 class="num">8</h3>
+            <h4 class="why">LEAVING THE CRADLE</h4>
+            <p>More than 300 robotic spacecraft have explored destinations 
+                beyond Earth orbit, including 24 astronauts who orbited the moon
+            </p>
+        </div>  
+        <div class="grid-item grid3">
+            <h3 class="num">9</h3>
+            <h4 class="why">LIFE AS WE KNOW IT</h4>
+            <p>Our solar system is the only one known to support life. So far, we only know of life on Earth, 
+                but we’re looking for more everywhere we can.
+            </p>
+        </div>  
+        <div class="grid-item grid3">
+            <h3 class="num">10</h3>
+            <h4 class="why">FAR-RANGING ROBOTS</h4>
+            <p>NASA’s Voyager 1 is the only spacecraft so far to leave our solar system. 
+                Four other spacecraft will eventually hit interstellar space..
+            </p>
+        </div>  
+        <div class="grid-item grid-img2">
+            
+        </div>  
+    </div>
+</div>
+<div class="planet-solar">
+    <h2>Planets in Our Solar System</h2>
+    <div class="planet">
+        <div class="planet-l">
+            <img src="/static/solar-system/mercury.PNG" >
+            <div class="about-planet">
+                <h4>Mercury</h4>
+                <p>Mercury-the smallest planet in our solar
+                    system and closest to the Sun-is only slightly larger 
+                    than Earth's Moon. Mercury is the fastest planet, zipping around the 
+                    Sun every 88 Earth days
+                </p>
+            </div>
+        </div>
+        <div class="planet-r">
+            <img src="/static/solar-system/venus.PNG" >
+            <div class="about-planet">
+                <h4>Venus</h4>
+                <p>Venus spins slowly in the opposite direction
+                    from most planets. A thick atmosphere traps 
+                    heat in a runaway greenhouse effect, making it the 
+                    hottest planet in our solar system.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="planet">
+        <div class="planet-l">
+            <img src="/static/solar-system/earth.PNG" >
+            <div class="about-planet">
+                <h4>Earth</h4>
+                <p>Earth-our home planet-is the only place 
+                    we know of so far that's inhabited by living 
+                    things. It's also the only planet in our solar 
+                    system with liquid water on the surface.
+                </p>
+            </div>
+        </div>
+        <div class="planet-r">
+            <img src="/static/solar-system/mars.PNG" >
+            <div class="about-planet">
+                <h4>Mars</h4>
+                <p>Mars is a dusty, cold, desert world with a 
+                    very thin atmosphere. There is strong 
+                    evidence Mars was-villions of years ago-wetter 
+                    and warmer, with a thicker atmosphere.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="planet">
+        <div class="planet-l">
+            <img src="/static/solar-system/jupiter.PNG" >
+            <div class="about-planet">
+                <h4>Jupiter</h4>
+                <p>Jupiter is more than twice as massive than 
+                    the other planets of our solar system comblined.
+                    The giant planet's Great Red spot is a centuries-old strom 
+                    bigger than Earth.
+                </p>
+            </div>
+        </div>
+        <div class="planet-r">
+            <img src="/static/solar-system/saturn.PNG" >
+            <div class="about-planet">
+                <h4>Saturn</h4>
+                <p>Adorned with a dazzing, complex system of 
+                    icy rings, Saturn is unique in our solar system.
+                    The other giant planets have rings,but none are as spectacular
+                    as Saturn's
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="planet">
+        <div class="planet-l">
+            <img src="/static/solar-system/uranus.PNG" >
+            <div class="about-planet">
+                <h4>Uranus</h4>
+                <p>Uranus-seventh planet from the Sun-rotates at a nearly 
+                    90-degree angle from the plane of its orbit. This unique tilt 
+                    makes Uranus apprear to spin on its side.
+                </p>
+            </div>
+        </div>
+        <div class="planet-r">
+            <img src="/static/solar-system/naptune.PNG" >
+            <div class="about-planet">
+                <h4>Neptune</h4>
+                <p>Neptune-the eight and most distant major 
+                    planet orbiting our Sun-is dark,cold and whipped
+                    by supersonic winds. It was the first planet located 
+                    through mathematical calculations.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

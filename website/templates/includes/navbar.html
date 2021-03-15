@@ -1,0 +1,22 @@
+{% if user.is_authenticated %}
+<nav>
+    <a href="#" class="logo">nasa</a>
+    <ul class="link-page">
+        <li class="page"><a href="/">Home</a></li>
+        <li class="page"><a href="/neo">Neo</a></li>
+        <li class="page"><a href="/mars">Mars</a></li>
+        <li class="page"><a href="/earth">Earth</a></li>
+        <li class="page"><a href="/team">Team</a></li>
+        <li class="page"><a href="/logout">Logout</a></li>
+        <li class="img-user"><img src="/static/team/{{ user.profile }}" alt=""></li>
+    </ul>
+</nav>
+{% endif %}
+
+<!-- <li>         
+    <div class="action">
+        <div class="user">
+            <img src="/static/{{ user.profile }}" >
+        </div>
+    </div> 
+</li> -->
