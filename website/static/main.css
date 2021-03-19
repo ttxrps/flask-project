@@ -274,6 +274,7 @@ nav.sticky .link-page .page a{
     color: rgb(27, 27, 27);
     width: 50%;
     margin: 10px auto 0;
+    z-index: 9999;
 }
 .error{
     background: rgb(255, 150, 150);
@@ -285,9 +286,10 @@ nav.sticky .link-page .page a{
     text-align: center;
     color: #fff;
     padding-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: -50px;
     font-size: 56px;
     font-weight: 700;
+
 }
 .profile{
     display: flex;
@@ -307,8 +309,8 @@ nav.sticky .link-page .page a{
 }
 .box-team .team{
     position: relative;
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     display: flex;
     margin: 40px;
 }
@@ -651,6 +653,14 @@ nav.sticky .link-page .page a{
     background: linear-gradient(to right,#ffdca2,#fe676e,#ffdca2);
     background-size: 200%;
 }
+.neo-container a:nth-child(11){
+    background: linear-gradient(to right,#7097a8,#abd1dc,#7097a8);
+    background-size: 200%;
+}
+.neo-container a:nth-child(12){
+    background: linear-gradient(to right,#e4c7b7,#c2649a,#e4c7b7);
+    background-size: 200%;
+}
 .neo-container a:hover{
     background-position-x: 100%;
     transform: translateY(-15px);
@@ -793,32 +803,7 @@ nav.sticky .link-page .page a{
     font-size: 24px;
     font-weight: 700;
 }
-.grid-container {
-    display: grid;
-    grid-template: 150px / fit-content fit-content fit-content;
-    grid-gap: 10px;
-    /* background-color: #fff; */
-    padding: 50px;
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
-    text-align: left;
-}
-.cat-moon{
-    background-image: url('https://64.media.tumblr.com/df34e08b458c0efe97dfdf5e4bf92908/a9f7b3e493b4361c-e3/s500x750/77b9728e6c5f6a1ceb7a9b221a3c90fcca709eac.gifv');
-    background-size: cover;
-    padding-top: 2.5%;
-    padding-bottom: 2.5%;
-}
-.cat-moon h3{
-    font-weight: 500;
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-}
-.cat-moon .grid-container .item .pic-moon > img{
-    object-fit: cover;
-    width: 50%;
-}
+
 .footer-box{
     display: flex;
     justify-content: flex-start;
