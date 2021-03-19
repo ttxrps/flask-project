@@ -5,12 +5,12 @@ from flask import request
 def fetchAPOD():
     URL_APOD = "https://api.nasa.gov/planetary/apod"
     api_key = 'PIQgwKgT5WieoxPWMksJNr1GtdtIktdVc01dc6Jr'
-    # now = datetime.datetime.now()
-    # year = now.year
-    # month = now.month
-    # day = now.day - 1
-    # date = str(year)+'-'+str(month)+'-'+str(day)
-    date = '2018-11-14'
+    now = datetime.datetime.now()
+    year = now.year
+    month = now.month
+    day = now.day - 1
+    date = str(year)+'-'+str(month)+'-'+str(day)
+    date 
     params = {
         'api_key': api_key,
         'date': date,
@@ -50,12 +50,12 @@ def fetchInSightMars():
     url = urlopen(URL_Mars).read()
     parsed_mars = json.loads(url)
     mars = None
-    first_UTC = parsed_mars['811']['First_UTC'] 
-    last_UTC = parsed_mars['811']['Last_UTC']
-    month_ordinal = parsed_mars['811']['Month_ordinal']
-    northern_season = parsed_mars['811']['Northern_season']
-    season = parsed_mars['811']['Season']
-    southern_season = parsed_mars['811']['Southern_season']
+    first_UTC = parsed_mars['813']['First_UTC'] 
+    last_UTC = parsed_mars['813']['Last_UTC']
+    month_ordinal = parsed_mars['813']['Month_ordinal']
+    northern_season = parsed_mars['813']['Northern_season']
+    season = parsed_mars['813']['Season']
+    southern_season = parsed_mars['813']['Southern_season']
         
     mars = {'first_UTC': first_UTC, 
             'last_UTC': last_UTC,
@@ -69,13 +69,13 @@ def fetchInSightMars():
 def get_image():
     scr_date = request.args.get('date')
     if not scr_date:
-        scr_date = '2019-05-30'
+        scr_date = '2018-06-14'
     url = 'https://api.nasa.gov/EPIC/api/natural/date/{0}?api_key=PIQgwKgT5WieoxPWMksJNr1GtdtIktdVc01dc6Jr'
     url_img = url.format(scr_date)
     data = urlopen(url_img).read()
     parsed = json.loads(data)
     img = []
-    for i in range(6):
+    for i in range(len(parsed)):
         earth = parsed[i]
         get_image =  earth['image']
         date = earth['date']
@@ -92,3 +92,5 @@ def fetchEPICImage(get_image,date_fom):
     URL_EPIC = URL_EPIC + '/png/'
     URL_EPIC = URL_EPIC + get_image + '.png'
     return URL_EPIC
+
+
